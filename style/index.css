@@ -1,0 +1,67 @@
+* {
+    --font-family-sans: 'Selawik', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans);
+}
+
+html {
+    background-image: url(../img/fondo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: block;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header" "content";
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url(../img/fondo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    background-color: #14183A;
+    border-bottom: 1px solid #6D98B680;
+    align-items: center;
+    justify-items: center;
+    padding: 0 60px;
+    gap: 40px;
+    z-index: 80;
+    height: 64px;
+}
+
+.header>.logo {
+    height: 25px;
+    margin: 15px 0 15px 0;
+}
+
+.logo>img {
+    height: 25px;
+}
+
+.content {
+    grid-area: content;
+    z-index: 10;
+    background-image: url("../img/HomeSmall.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+.content>.texto {
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
